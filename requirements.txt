@@ -1,0 +1,36 @@
+# Core / API
+fastapi
+uvicorn[standard]
+python-dotenv
+pyyaml
+
+# Database & Storage
+supabase
+
+# HTTP / Network
+requests
+aiohttp
+websockets
+
+# Messaging Platforms
+discord.py
+line-bot-sdk
+
+# Google Services
+google-genai
+google-auth
+google-auth-oauthlib
+google-api-python-client
+
+# Browser Control
+playwright
+
+# AI
+openai
+anthropic
+typhoon-asr
+
+# Audio Processing
+librosa
+soundfile
+python-multipart

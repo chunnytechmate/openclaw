@@ -1,6 +1,7 @@
 node_modules
 **/node_modules/
 .env
+.env.*
 docker-compose.override.yml
 docker-compose.extra.yml
 dist
@@ -104,6 +105,20 @@ package-lock.json
 .agents
 .agent/
 skills-lock.json
+
+# Local data directories
+data/
+typhoon/
+
+# Large ML model files (should be downloaded separately)
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+*.gguf
+*.ggml
 
 # Local iOS signing overrides
 apps/ios/LocalSigning.xcconfig

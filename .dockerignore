@@ -36,6 +36,20 @@ coverage
 *.log
 tmp
 **/tmp
+data/
+**/data/
+typhoon/
+**/typhoon/
+
+# Large ML model files (exclude from build context)
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+*.gguf
+*.ggml
 
 # build artifacts
 dist
