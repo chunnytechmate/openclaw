@@ -16,7 +16,7 @@ services:
       OPENCLAW_WORKSPACE_DIR: ${OPENCLAW_WORKSPACE_DIR:-./data/chunny_1/workspace}
       CLAUDE_CONFIG_DIR: ${CLAUDE_CONFIG_DIR:-./data/chunny_1/.claude}
       CLAUDE_JSON_DIR: ${CLAUDE_JSON_DIR:-./data/chunny_1/.claude.json}
-      OPENCLAW_GATEWAY_URL: ${OPENCLAW_GATEWAY_URL:-ws://localhost:18789}
+      OPENCLAW_GATEWAY_URL: ${OPENCLAW_GATEWAY_URL:-ws://localhost:${OPENCLAW_GATEWAY_PORT:-18789}}
       ZAI_API_KEY: ${ZAI_API_KEY:-}
       MINIMAX_API_KEY: ${MINIMAX_API_KEY:-}
       ANTHROPIC_AUTH_TOKEN: ${ANTHROPIC_AUTH_TOKEN:-}
@@ -54,8 +54,8 @@ services:
     # group_add:
     #   - "${DOCKER_GID:-999}"
     ports:
-      - "${OPENCLAW_GATEWAY_PORT:-18789}:18789"
-      - "${OPENCLAW_BRIDGE_PORT:-18790}:18790"
+      - "${OPENCLAW_GATEWAY_PORT:-18789}:${OPENCLAW_GATEWAY_PORT:-18789}"
+      - "${OPENCLAW_BRIDGE_PORT:-18790}:${OPENCLAW_BRIDGE_PORT:-18790}"
       - "8000:8000"
     init: true
     restart: unless-stopped
@@ -63,9 +63,9 @@ services:
       test:
         [
           "CMD",
-          "node",
-          "-e",
-          "fetch('http://127.0.0.1:18789/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+          "sh",
+          "-c",
+          "node -e \"fetch('http://127.0.0.1:${OPENCLAW_GATEWAY_PORT:-18789}/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\"",
         ]
       interval: 30s
       timeout: 5s
@@ -96,7 +96,7 @@ services:
       OPENCLAW_WORKSPACE_DIR: ${OPENCLAW_WORKSPACE_DIR:-./data/chunny_1/workspace}
       CLAUDE_CONFIG_DIR: ${CLAUDE_CONFIG_DIR:-./data/chunny_1/.claude}
       CLAUDE_JSON_DIR: ${CLAUDE_JSON_DIR:-./data/chunny_1/.claude.json}
-      OPENCLAW_GATEWAY_URL: ${OPENCLAW_GATEWAY_URL:-ws://localhost:18789}
+      OPENCLAW_GATEWAY_URL: ${OPENCLAW_GATEWAY_URL:-ws://localhost:${OPENCLAW_GATEWAY_PORT:-18789}}
       ZAI_API_KEY: ${ZAI_API_KEY:-}
       MINIMAX_API_KEY: ${MINIMAX_API_KEY:-}
       ANTHROPIC_AUTH_TOKEN: ${ANTHROPIC_AUTH_TOKEN:-}

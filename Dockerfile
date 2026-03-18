@@ -230,7 +230,8 @@ RUN ln -sf /app/openclaw.mjs /usr/local/bin/openclaw \
 
 # Install Python dependencies
 COPY --chown=node:node requirements.txt ./requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip3 install --break-system-packages -r requirements.txt
 
 # Create typhoon models directory
 RUN mkdir -p /typhoon && chown node:node /typhoon

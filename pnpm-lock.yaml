@@ -74,6 +74,12 @@ importers:
       '@mariozechner/pi-tui':
         specifier: 0.58.0
         version: 0.58.0
+      '@matrix-org/matrix-sdk-crypto-nodejs':
+        specifier: ^0.4.0
+        version: 0.4.0
+      '@microsoft/agents-hosting':
+        specifier: ^1.3.1
+        version: 1.3.1
       '@modelcontextprotocol/sdk':
         specifier: 1.27.1
         version: 1.27.1(zod@4.3.6)
@@ -83,6 +89,42 @@ importers:
       '@napi-rs/canvas':
         specifier: ^0.1.89
         version: 0.1.95
+      '@opentelemetry/api':
+        specifier: ^1.9.0
+        version: 1.9.0
+      '@opentelemetry/api-logs':
+        specifier: ^0.213.0
+        version: 0.213.0
+      '@opentelemetry/exporter-logs-otlp-proto':
+        specifier: ^0.213.0
+        version: 0.213.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/exporter-metrics-otlp-proto':
+        specifier: ^0.213.0
+        version: 0.213.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/exporter-trace-otlp-proto':
+        specifier: ^0.213.0
+        version: 0.213.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/resources':
+        specifier: ^2.6.0
+        version: 2.6.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-logs':
+        specifier: ^0.213.0
+        version: 0.213.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-metrics':
+        specifier: ^2.6.0
+        version: 2.6.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-node':
+        specifier: ^0.213.0
+        version: 0.213.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base':
+        specifier: ^2.6.0
+        version: 2.6.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/semantic-conventions':
+        specifier: ^1.40.0
+        version: 1.40.0
+      '@pierre/diffs':
+        specifier: 1.1.0
+        version: 1.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@sinclair/typebox':
         specifier: 0.34.48
         version: 0.34.48
@@ -92,9 +134,30 @@ importers:
       '@slack/web-api':
         specifier: ^7.15.0
         version: 7.15.0
+      '@tloncorp/tlon-skill':
+        specifier: 0.2.2
+        version: 0.2.2
+      '@twurple/api':
+        specifier: ^8.0.3
+        version: 8.0.3(@twurple/auth@8.0.3)
+      '@twurple/auth':
+        specifier: ^8.0.3
+        version: 8.0.3
+      '@twurple/chat':
+        specifier: ^8.0.3
+        version: 8.0.3(@twurple/auth@8.0.3)
+      '@urbit/aura':
+        specifier: ^3.0.0
+        version: 3.0.0
+      '@vector-im/matrix-bot-sdk':
+        specifier: 0.8.0-element.3
+        version: 0.8.0-element.3(@cypress/request@3.0.10)
       '@whiskeysockets/baileys':
         specifier: 7.0.0-rc.9
         version: 7.0.0-rc.9(audio-decode@2.2.3)(sharp@0.34.5)
+      acpx:
+        specifier: 0.3.0
+        version: 0.3.0(zod@4.3.6)
       ajv:
         specifier: ^8.18.0
         version: 8.18.0
@@ -128,6 +191,9 @@ importers:
       gaxios:
         specifier: 7.1.3
         version: 7.1.3
+      google-auth-library:
+        specifier: ^10.6.1
+        version: 10.6.1
       grammy:
         specifier: ^1.41.1
         version: 1.41.1
@@ -158,12 +224,21 @@ importers:
       markdown-it:
         specifier: ^14.1.1
         version: 14.1.1
+      music-metadata:
+        specifier: ^11.12.3
+        version: 11.12.3
       node-edge-tts:
         specifier: ^1.2.10
         version: 1.2.10
       node-llama-cpp:
         specifier: 3.16.2
         version: 3.16.2(typescript@5.9.3)
+      nostr-tools:
+        specifier: ^2.23.3
+        version: 2.23.3(typescript@5.9.3)
+      openai:
+        specifier: ^6.29.0
+        version: 6.29.0(ws@8.19.0)(zod@4.3.6)
       opusscript:
         specifier: ^0.1.1
         version: 0.1.1
@@ -200,6 +275,9 @@ importers:
       yaml:
         specifier: ^2.8.2
         version: 2.8.2
+      zca-js:
+        specifier: 2.1.1
+        version: 2.1.1
       zod:
         specifier: ^4.3.6
         version: 4.3.6
