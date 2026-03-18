@@ -1,4 +1,4 @@
-# Dynamic Container Custom Made For Chunny
+# Dynamic Container And Dependencies Custom Made By Chunny
 
 # 🦞 OpenClaw — Personal AI Assistant
 
