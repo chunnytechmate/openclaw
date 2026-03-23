@@ -25,6 +25,10 @@ google-api-python-client
 # Browser Control
 playwright
 
+# Typhoon ASR dependencies
+nemo_toolkit[asr]
+uvicorn[standard]
+
 # AI
 openai
 anthropic
